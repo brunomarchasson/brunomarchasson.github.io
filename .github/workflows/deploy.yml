@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   build:
@@ -17,11 +21,20 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
 
-      - name: Install dependencies
-        uses: bahmutov/npm-install@v1
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      - name: Install Chromium
+        run: sudo apt-get update && sudo apt-get install -y chromium-browser
+
+      - name: Set Puppeteer executable path
+        run: echo "PUPPETEER_EXECUTABLE_PATH=$(which chromium-browser)" >> $GITHUB_ENV
 
       - name: Build theme/custom
-        run: pnpm install && pnpm --filter ./theme/custom... install && pnpm --filter ./theme/custom... build
+        run: pnpm --filter ./theme/custom... install && pnpm --filter ./theme/custom... build
+        
+      - name: Install root dependencies
+        run: pnpm install
 
       - name: Build project
         run: npm run build
@@ -50,3 +63,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
+          publish_branch: gh-pages
