@@ -8,7 +8,6 @@ type MediaWrapperProps = {
 export const MediaWrapper = ({ children, media }: MediaWrapperProps): ReactElement => {
     const result = <>{children}</>;
 
-    console.log("MediaWrapper", media, result);
     const mediaRules = collectRules();
 
     if (media === "print") {

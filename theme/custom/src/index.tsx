@@ -16,7 +16,6 @@ function render(resume: ResumeType) {
   } catch (e) {
     styles = '';
   }
-  console.log(styles)
   const resumeHtml = renderToString(
     <I18nextProvider i18n={createI18N('fr')}>
       <Resume {...resume} />

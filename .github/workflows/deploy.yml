@@ -20,6 +20,9 @@ jobs:
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
 
+      - name: Build theme/custom
+        run: pnpm install && pnpm --filter ./theme/custom... install && pnpm --filter ./theme/custom... build
+
       - name: Build project
         run: npm run build
 
