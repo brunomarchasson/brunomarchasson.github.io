@@ -1,0 +1,32 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "init": "resumed init",
+    "build": "esbuild theme/custom/src/index.tsx --bundle --platform=node --outfile=dist/index.js --format=cjs",
+    "start": "resumed --theme jsonresume-theme-local",
+    "export": "resumed export --theme jsonresume-theme-local"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.7.1",
+  "dependencies": {
+    "jsonresume-theme-local": "file:./theme/custom",
+    "puppeteer": "^24.9.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "resumed": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.21",
+    "@types/react": "^19.1.5",
+    "@types/react-dom": "^19.1.5",
+    "esbuild": "^0.25.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}

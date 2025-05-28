@@ -1,0 +1,168 @@
+{
+    "basics": {
+      "name": "Bruno Marchasson",
+      "label": "Développeur full-stack",
+      "image": "data:image/octet-stream;base64,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",
+      
+      
+      "summary": " Développeur full-stack senior cumulant plus de 20 ans d’expérience dans la conception, le développement et l’architecture de systèmes complexes pour des applications web et mobiles. Spécialisé dans l’écosystème JavaScript (Node.js, React) et expert en gestion de bases de données, j’ai piloté avec succès des projets stratégiques alliant optimisation des performances, intégration de services tiers et conduite d’équipes techniques. Passionné par l’innovation et la recherche de solutions robustes, j’adopte une approche agile et méthodique pour répondre aux défis technologiques les plus ambitieux.",
+      "website": "https://www.doyoubuzz.com/bruno-marchasson/",
+      "location": {
+        "city": "Le Puy-Sainte-Réparade",
+        "countryCode": "FR",
+        "country": "France"
+      },
+      "profiles": [
+        {
+            "id": "github",
+          "network": "GitHub",
+          "username": "brunomarchasson",
+          "url": "https://github.com/brunomarchasson"
+        },
+        {
+        "id": "LinkedIn",
+        "network": "LinkedIn",
+        "username": "bruno-marchasson",
+        "url": "https://www.linkedin.com/in/bruno-marchasson"
+      }
+      ]
+    },
+    "work": [
+      {
+        "name": "Perspective[s]",
+        "position": "Lead Developer full stack",
+        "startDate": "2020-07-01",
+        "endDate": "2024-10-01",
+        "location": "Aix-en-Provence, France",
+        "highlights": [
+          "Conception de l'architecture des projets",
+          "Supervision des équipes de développement",
+          "Développement full-stack (frontend et backend)",
+          "Configuration et optimisation des serveurs d'hébergement",
+          "Rédaction de documentation technique",
+          "Gestion des bases de données",
+          "Technologies utilisées : NodeJS, React, React Native, Electron, PostgreSQL, Jest, Vitest, Jenkins"
+        ]
+      },
+      {
+        "name": "Potentiel IT",
+        "position": "Ingénieur d’Etudes",
+        "startDate": "2019-08-01",
+        "endDate": "2020-07-01",
+        "highlights": [
+          "Création d’API REST",
+          "Création de deux Single Page Applications (SPA) en React",
+          "Mise en place de tests fonctionnels et unitaires",
+          "Gestion des données sécurisées",
+          "Technologies utilisées : NodeJS, Sequelize, React, PostgreSQL, Jest, Git, Jenkins, Jira"
+        ]
+      },
+      {
+        "name": "WeAssur",
+        "position": "Développeur full-stack",
+        "startDate": "2016-10-01",
+        "endDate": "2019-08-01",
+        "highlights": [
+          "Développement full-stack (frontend et backend)",
+          "Création d'API REST et GraphQL",
+          "Intégration de services tiers (Sentry, Slack, Intercom, Stripe, MailJet, Google Analytics, ...)",
+          "Technologies utilisées : Django 1 et 2, React, PostgreSQL, Ansible, Jest, Graphene, Apollo, Git"
+        ]
+      },
+      {
+        "name": "Freelance",
+        "position": "Développeur freelance",
+        "startDate": "2002-01-01",
+        "endDate": "2016-10-01",
+        "highlights": [
+          "Développement et maintenance d'un ERP pour les fabricants d'étiquettes adhésives",
+          "Développement et maintenance d'un ERP pour un tour Operator (Homair Vacances)",
+          "Technologies utilisées : C++, MSSQL, SSAS, Windows Server 2003 - 2012 R2"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "institution": "Université Aix-Marseille II",
+        "area": "Informatique",
+        "studyType": "Maîtrise",
+        "startDate": "2001-09-01",
+        "endDate": "2002-06-01"
+      },
+      {
+        "institution": "Université Aix-Marseille II",
+        "area": "Informatique",
+        "studyType": "Licence",
+        "startDate": "2000-09-01",
+        "endDate": "2001-06-01"
+      },
+      {
+        "institution": "Université Aix-Marseille II",
+        "area": "Télécommunications et Réseaux",
+        "studyType": "DUT GTR",
+        "startDate": "1998-09-01",
+        "endDate": "2000-06-01"
+      },
+      {
+        "institution": "Lycée Vauvenargues Aix-en-Provence",
+        "area": "Electronique",
+        "studyType": "Baccalauréat STI",
+        "endDate": "1998-06-01"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Intégration web",
+        "keywords": [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "JSON"
+        ]
+      },
+      {
+        "name": "Langages de programmation",
+        "keywords": [
+          "Python",
+          "Powershell",
+          "C++",
+          "C#",
+          "GraphQL"
+        ]
+      },
+      {
+        "name": "Frameworks / Librairies",
+        "keywords": [
+          "NodeJS",
+          "ReactJS",
+          "Django"
+        ]
+      },
+      {
+        "name": "Base de données",
+        "keywords": [
+          "MySQL",
+          "SQL Server",
+          "PostgreSQL"
+        ]
+      },
+      {
+        "name": "Outils",
+        "keywords": [
+          "Git",
+          "Jenkins",
+          "JIRA"
+        ]
+      }
+    ],
+    "languages": [
+      {
+        "language": "Français",
+        "fluency": "Native"
+      },
+      {
+        "language": "Anglais",
+        "fluency": "B1"
+      }
+    ]
+  }

@@ -1,0 +1,32 @@
+{
+  "en": {
+    "translation": {
+      "Skills": "Skills",
+      "Interests": "Interests",
+      "Work Experience": "Work Experience",
+      "Certificates": "Certificates",
+      "Projects": "Projects",
+      "Volunteer": "Volunteer",
+      "Education": "Education",
+      "Awards": "Awards",
+      "Publications": "Publications",
+      "Languages": "Languages",
+      "References": "References"
+    }
+  },
+  "fr": {
+    "translation": {
+      "Skills": "Compétences",
+      "Interests": "Centres d'intérêt",
+      "Work Experience": "Expérience professionnelle",
+      "Certificates": "Certificats",
+      "Projects": "Projets",
+      "Volunteer": "Bénévolat",
+      "Education": "Formation",
+      "Awards": "Récompenses",
+      "Publications": "Publications",
+      "Languages": "Langues",
+      "References": "Références"
+    }
+  }
+}

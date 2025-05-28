@@ -1,0 +1,10 @@
+name: Local Model Configuration
+version: 0.0.1
+schema: v1
+models:
+  - provider: ollama
+    model: deepseek-r1
+    name: deepseek (ollama)
+    roles:
+      - chat
+      - edit

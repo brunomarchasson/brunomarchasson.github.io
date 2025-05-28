@@ -1,0 +1,328 @@
+{
+  "basics": {
+    "name": "Bruno Marchasson",
+    "label": "Développeur full-stack senior / Architecte JavaScript",
+    "email": "bruno.marchasson@gmail.com",
+    "phone": "+33 6 22 53 03 46",
+    "image": "data:image/octet-stream;base64,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",
+    "summary": "Développeur full-stack senior avec plus de 20 ans d'expérience, spécialisé dans l’écosystème JavaScript (Node.js, React) et la conception d’architectures performantes. Leader technique reconnu, j’ai piloté des projets stratégiques en environnement agile, de la phase d’idéation à la mise en production. Passionné par les défis techniques complexes, je mets mon expertise au service de l’innovation, de la scalabilité et de la robustesse logicielle.",
+    "website": "https://brunomarchasson.github.io",
+    "location": {
+      "city": "Le Puy-Sainte-Réparade",
+      "countryCode": "FR",
+      "country": "France"
+    },
+    "profiles": [
+      {
+        "id": "github",
+        "network": "GitHub",
+        "username": "brunomarchasson",
+        "url": "https://github.com/brunomarchasson"
+      },
+      {
+        "id": "LinkedIn",
+        "network": "LinkedIn",
+        "username": "bruno-marchasson",
+        "url": "https://www.linkedin.com/in/bruno-marchasson"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Perspective[s]",
+      "position": "Lead Developer full stack",
+      "startDate": "2020-07-01",
+      "endDate": "2024-10-01",
+      "location": "Aix-en-Provence, France",
+      "summary": "Responsable du développement web et de l’encadrement de l’équipe technique.",
+      "highlights": [
+        "gestion d’une équipe de 4 développeurs",
+        "Conception de l’architecture d'une dizaine d'applications stratégiques, optimisées pour la scalabilité et la sécurité",
+        "Développement full-stack (frontend et backend)",
+        "Configuration et optimisation des serveurs d'hébergement",
+        "Rédaction de documentation technique",
+        "Gestion des bases de données"
+      ],
+      "keywords": [
+        "NodeJS",
+        "Typescript",
+        "React",
+        "React Native",
+        "Electron",
+        "PostgreSQL",
+        "Jest",
+        "Vitest",
+        "Jenkins",
+        "Scrum"
+      ]
+    },
+    {
+      "name": "Potentiel IT / Sopra stéria",
+      "position": "Ingénieur d’Etudes",
+      "startDate": "2019-08-01",
+      "endDate": "2020-07-01",
+      "summary": "développement d’un système de suivi et d’analyse de l’historique d’entretiens d’aéronefs pour Dassault Aviation",
+      "highlights": [
+        "Création d’API REST",
+        "Création de deux Single Page Applications (SPA) en React",
+        "Mise en place de tests fonctionnels et unitaires",
+        "Gestion des données sécurisées"
+      ],
+      "keywords": [
+        "NodeJS",
+        "Sequelize",
+        "React",
+        "PostgreSQL",
+        "Jest",
+        "Git",
+        "Jira",
+        "Scrum"
+      ]
+    },
+    {
+      "name": "WeAssur",
+      "position": "Développeur full-stack",
+      "startDate": "2016-10-01",
+      "endDate": "2019-08-01",
+      "summary": "Plateforme de mise en relation pour les intermédiaires d’assurance",
+      "highlights": [
+        "Développement full-stack (frontend et backend)",
+        "Création d'API REST et GraphQL",
+        "Intégration de services tiers (Sentry, Slack, Intercom, Stripe, MailJet, Google Analytics, ...)"
+      ],
+      "keywords": [
+        "Django 1 & 2",
+        "React",
+        "PostgreSQL",
+        "Ansible",
+        "Jest",
+        "Graphene",
+        "Apollo",
+        "Git"
+      ]
+    },
+    {
+      "name": "Freelance",
+      "position": "Développeur freelance",
+      "startDate": "2008-01-01",
+      "endDate": "2016-10-01",
+      "summary": "En collaboration avec 2 développeurs, conception, développement et maintenance d'un ERP pour les fabricants d'étiquettes adhésives",
+      "highlights": [
+        "Analyse des besoins clients",
+        "Conception de base de données relationnelle",
+        "Développement d'applications de gestion en C++",
+        "Développement de statistiques multi-dimensionnelles avec SSAS",
+        "Déploiement et maintenance de l'application",
+        "Formation et support technique"
+      ],
+      "keywords": [
+        "C++",
+        "MSSQL",
+        "SSAS",
+        "Windows Server 2003 - 2012 R2"
+      ]
+    },
+    {
+      "name": "Freelance",
+      "position": "Développeur freelance",
+      "startDate": "2002-01-01",
+      "endDate": "2018-10-01",
+      "summary": "En collaboration avec 2 développeurs,  conception, développement et maintenance d'un ERP pour un tour Operator (Homair Vacances)",
+      "highlights": [
+        "Conception de base de données relationnelle",
+        "Développement d'applications de gestion en C++",
+        "Déploiement et maintenance de l'application"
+      ],
+      "keywords": [
+        "C++",
+        "MSSQL",
+        "Windows Server 2003 - 2012 R2"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Université Aix-Marseille II",
+      "area": "Informatique",
+      "studyType": "Maîtrise",
+      "startDate": "2001-09-01",
+      "endDate": "2002-06-01"
+    },
+    {
+      "institution": "Université Aix-Marseille II",
+      "area": "Informatique",
+      "studyType": "Licence",
+      "startDate": "2000-09-01",
+      "endDate": "2001-06-01"
+    },
+    {
+      "institution": "Université Aix-Marseille II",
+      "area": "Télécommunications et Réseaux",
+      "studyType": "DUT GTR",
+      "startDate": "1998-09-01",
+      "endDate": "2000-06-01"
+    },
+    {
+      "institution": "Lycée Vauvenargues Aix-en-Provence",
+      "area": "Electronique",
+      "studyType": "Baccalauréat STI",
+      "endDate": "1998-06-01"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Render (AR / BTP)",
+      "description": "Plateforme R&D de visualisation en réalité augmentée de maquettes 3D annotées, intégrées dans leur environnement réel pour le secteur du bâtiment.",
+      "highlights": [
+        "Développement d’un viewer 3D interactif basé sur Three.js et itowns",
+        "Intégration de modèles BIM annotés dans leur environnement réel via réalité augmentée",
+        "Preuve de concept validée auprès d’architectes et maîtres d'œuvre"
+      ],
+      "keywords": [
+        "3D",
+        "Réalité augmentée",
+        "React",
+        "WebGL",
+        "Three.js"
+      ]
+    },
+    {
+      "name": "3D Roc (archéologie)",
+      "description": "Application web de visualisation de scans 3D haute définition d'une grotte préhistorique (Grotte aux Sorciers), à destination des archéologues.",
+      "keywords": [
+        "WebGL",
+        "React",
+        "Three.js",
+        "3D"
+      ],
+      "highlights": [
+        "Optimisation du rendu WebGL pour des modèles 3D de très haute définition (>500 Mo)",
+        "Navigation fluide sur desktop et tablette avec contrôles intuitifs",
+        "Collaboration avec des archéologues pour modéliser l’expérience utilisateur"
+      ]
+    },
+    {
+      "name": "Identification (criminologie)",
+      "description": "Application Electron pour l’analyse de traces de sang, utilisée par les experts en criminologie pour des reconstitutions de scènes de crime.",
+      "keywords": [
+        "Electron",
+        "NodeJS",
+        "PostgreSQL"
+      ],
+      "highlights": [
+        "Création d'une interface Electron pour l’analyse de projections de sang en environnement fermé",
+        "Application utilisée dans des contextes d’expertise judiciaire"
+      ]
+    },
+    {
+      "name": "Plateforme WeAssur",
+      "description": "Plateforme de mise en relation entre intermédiaires d’assurance et leurs clients. Applications React Native (mobile) et React (web).",
+      "keywords": [
+        "React",
+        "React Native",
+        "GraphQL",
+        "Django"
+      ],
+      "highlights": [
+        "Développement d’une application mobile (React Native) et web (React) pour le suivi client",
+        "Mise en place d’un back-end GraphQL avec authentification JWT",
+        "Intégration de notifications push, paiement Stripe et outils de tracking (GA, Intercom)"
+      ]
+    },
+    {
+      "name": "Plomberie Intervention",
+      "description": "Application React et React Native pour la planification et le suivi d’interventions terrain dans une entreprise de plomberie.",
+      "highlights": [
+        "Développement d’une application hybride React/React Native pour le suivi d’intervention",
+        "Gestion de planning, géolocalisation, reporting et photos terrain",
+        "Back-end sécurisé avec synchronisation offline/online"
+      ],
+      "keywords": [
+        "React",
+        "React Native",
+        "NodeJS",
+        "PostgreSQL"
+      ]
+    },
+    {
+      "name": "Système de suivi aéronautique",
+      "description": "Application web pour la traçabilité d’interventions sur aéronefs (Dassault Aviation). Conformité réglementaire, API REST sécurisée.",
+      "keywords": [
+        "React",
+        "NodeJS",
+        "PostgreSQL"
+      ]
+    },
+    {
+      "name": "ERP Étiquettes",
+      "description": "ERP sur mesure pour l’industrie de l’étiquette adhésive. Gestion de production, statistiques multidimensionnelles, planning, facturation, comptabilité.",
+      "keywords": [
+        "C++",
+        "SSAS",
+        "MSSQL"
+      ]
+    },
+    {
+      "name": "ERP Tour opérator",
+      "description": "ERP sur mesure pour un tour opérator. Gestion des commandes, planning, facturation, comptabilité.",
+      "keywords": [
+        "C++",
+        "SSAS",
+        "MSSQL"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "name": "Front-end",
+      "keywords": [
+        "ReactJS",
+        "React Native",
+        "Electron",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "TypeScript"
+      ]
+    },
+    {
+      "name": "Back-end",
+      "keywords": [
+        "NodeJS",
+        "Python",
+        "C#",
+        "GraphQL",
+        "Django"
+      ]
+    },
+    {
+      "name": "Bases de données",
+      "keywords": [
+        "PostgreSQL",
+        "MySQL",
+        "SQL Server",
+        "MSSQL"
+      ]
+    },
+    {
+      "name": "DevOps / CI/CD",
+      "keywords": [
+        "Git",
+        "Jenkins",
+        "Ansible",
+        "Docker",
+        "Windows Server"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Français",
+      "fluency": "Native"
+    },
+    {
+      "language": "Anglais",
+      "fluency": "professionnel (B1 – lecture de documentation technique, échanges oraux écrits en environnement international)"
+    }
+  ]
+}

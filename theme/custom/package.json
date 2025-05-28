@@ -1,0 +1,66 @@
+{
+  "name": "jsonresume-theme-local",
+  "version": "2.1.2",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "exports": {
+    "./en": "./dist/en/index.js",
+    ".": "./dist/index.js"
+  },
+  "dependencies": {
+    "@icons-pack/react-simple-icons": "^12.8.0",
+    "@vitejs/plugin-react-swc": "^3.10.0",
+    "clsx": "^2.1.1",
+    "i18next": "^25.2.0",
+    "i18next-browser-languagedetector": "^8.1.0",
+    "i18next-http-backend": "^3.0.2",
+    "lucide-react": "^0.511.0",
+    "luxon": "^3.6.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-i18next": "^15.5.1",
+    "simple-icons": "^14.14.0"
+  },
+  "devDependencies": {
+    "@esbuild-plugins/node-globals-polyfill": "^0.2.3",
+    "@storybook/react-vite": "8.6.14",
+    "@types/jest": "^29.5.14",
+    "@types/luxon": "^3.6.2",
+    "@types/node": "^22.15.21",
+    "@types/react": "^19.1.5",
+    "@types/react-dom": "^19.1.5",
+    "@vitejs/plugin-react": "^4.4.1",
+    "eslint": "^9.27.0",
+    "storybook": "^8.6.14",
+    "storybook-react-i18next": "^3.0.1",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5"
+  },
+  "scripts": {
+    "dev": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "build": "vite build --config vite.config.ts",
+    "preview": "vite preview",
+    "lint": "pnpm eslint .",
+    "prepublishOnly": "pnpm run clean && pnpm run build",
+    "clean": "rm -rf dist storybook-static",
+    "prepare": "pnpm run build"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "style.css"
+  ],
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
