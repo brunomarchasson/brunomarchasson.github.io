@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   build:
@@ -17,11 +18,11 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
 
-      - name: Install dependencies
-        uses: bahmutov/npm-install@v1
-
       - name: Build theme/custom
         run: pnpm install && pnpm --filter ./theme/custom... install && pnpm --filter ./theme/custom... build
+      
+      - name: Install dependencies
+        uses: bahmutov/npm-install@v1
 
       - name: Build project
         run: npm run build
