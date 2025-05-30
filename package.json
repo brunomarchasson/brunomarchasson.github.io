@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "init": "resumed init",
-    "build": "rimraf dist && mkdir dist && resumed export --theme jsonresume-theme-local --format html --output dist/index.html && resumed export --theme jsonresume-theme-local --format pdf --output dist/resume.pdf",
+    "build": "rimraf dist && mkdir dist && resumed --theme jsonresume-theme-local --output dist/index.html && resumed export --theme jsonresume-theme-local  --output dist/resume.pdf" ,
     "start": "resumed --theme jsonresume-theme-local",
     "export": "resumed export --theme jsonresume-theme-local"
   },
