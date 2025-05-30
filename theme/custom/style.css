@@ -73,7 +73,28 @@
 
     --color-background: var(--primary-200);
     --color-text: var(--secondary-500);
+
+
+
   }
+
+  .clay {
+    --clay-level: var(--clay-base, 4px);
+    --clay-base: 4px;
+    --clay-background: var(--color-primary);
+    --clay-border-radius: 32px;
+    --clay-shadow-outset: var(--clay-level, 4px) var(--clay-level, 4px) 8px 0 rgba(0, 0, 0, 0.25);
+    --clay-shadow-inset-primary: calc(var(--clay-level, 4px)*-1) calc(var(--clay-level, 4px)*-1) 8px 0 rgba(0, 0, 0, 0.25);
+    --clay-shadow-inset-secondary: var(--clay-level, 4px) var(--clay-level, 4px) 8px 0 rgba(255, 255, 255, 0.2);
+
+    background: var(--clay-background);
+    border-radius: var(--clay-border-radius, 32px);
+    box-shadow:
+      var(--clay-shadow-outset),
+      inset var(--clay-shadow-inset-primary),
+      inset var(--clay-shadow-inset-secondary);
+  }
+
 }
 
 /* --- Layer: reset --- */
@@ -523,13 +544,13 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   }
 
-  @media (width < 768px) {
+  @media screen and (width < 768px) {
     .hideMobile {
       display: none;
     }
   }
 
-  @media (width >=768px) {
+  @media screen and  (width >=768px), print {
     .hideDesktop {
       display: none;
     }
@@ -538,6 +559,33 @@
 
 
 @layer components {
+  .floating-download-button {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    color: white;
+    padding: 12px 20px;
+    font-size: 18px;
+    text-decoration: none;
+    z-index: 9999;
+    transition: background 0.2s;
+    border: none;
+
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    &:hover {
+      --clay-background: var(--color-secondary);
+      transform: scale(1.1) translate3d(0, 0, 0);
+    }
+
+    &:active {
+      transform: scale(0.9) translate3d(0, 0, 0);
+      --clay-level: -4px;
+    }
+  }
+
   .resume {
     display: grid;
     grid-template-columns: 35ch 1fr;
@@ -551,7 +599,7 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    
+
     .section>header>h2 {
       color: inherit;
       background: var(--color-primary);
@@ -712,6 +760,7 @@
     .subTitle {
       display: inline;
       font-weight: normal;
+
       &:before {
         content: '\00A0|\00A0';
       }
@@ -748,7 +797,7 @@
   }
 }
 
-@media (width < 768px) {
+@media screen and (width < 768px) {
   .resume {
     display: block;
   }
@@ -819,16 +868,25 @@
 }
 
 @media print {
+  html{
+    background-color: red;
+
+  }
   body {
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
     margin: 0;
-    padding: 0
+    padding: 0;
+    width: 210mm;
+    
   }
-
-
+  
+  
   .main {}
-
+  
+  .floating-download-button {
+    display: none;
+  }
   .section>header {
     break-after: avoid;
   }
@@ -839,9 +897,10 @@
   }
 
   @page {
-    size: A4 Portrait;
-    margin: 0;
-
+    size: a4; 
+  margin: 0;
   }
 
 }
+
+

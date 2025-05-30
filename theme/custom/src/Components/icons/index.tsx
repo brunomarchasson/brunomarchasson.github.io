@@ -1,4 +1,4 @@
-import { AtSign, Globe, Linkedin, Mail, MapPin, Phone, Star } from 'lucide-react';
+import { AtSign, Download, Globe, Linkedin, Mail, MapPin, Phone, Star } from 'lucide-react';
 import { SiGithub } from '@icons-pack/react-simple-icons';
 export const IconLib = {
     email: AtSign ,
@@ -9,4 +9,5 @@ export const IconLib = {
     web: Globe,
     github: SiGithub,
     linkedin: Linkedin,
+    download: Download
 }

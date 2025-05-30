@@ -14,12 +14,12 @@ export const MediaWrapper = ({ children, media }: MediaWrapperProps): ReactEleme
         console.log("MediaWrapper: Simulating print mode");
         replaceInAllRules(mediaRules.screen, "disabled");
         replaceInAllRules(mediaRules.print, "screen");
-        console.log(mediaRules);
+        // console.log(mediaRules);
     } else if (media === "screen") {
         console.log("MediaWrapper: Simulating screen mode");
         replaceInAllRules(mediaRules.screen, "screen");
         replaceInAllRules(mediaRules.print, "print");
-        console.log(mediaRules);
+        // console.log(mediaRules);
     }
 
     return result;

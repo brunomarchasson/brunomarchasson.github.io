@@ -2,7 +2,7 @@
 
 module.exports = {
   root: true,
-  "extends": ["eslint:recommended"],
+  "extends": ["eslint:recommended", "plugin:storybook/recommended"],
   "env": {
     "node": true
   } ,

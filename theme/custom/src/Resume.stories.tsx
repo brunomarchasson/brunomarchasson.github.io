@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import { MediaWrapper } from "./MediaWrapper";
 import { Resume } from "./Resume";
 import storyResume from "./storyResume.json";

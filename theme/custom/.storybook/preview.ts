@@ -1,5 +1,5 @@
 import '../style.css';
-import type { Preview } from '@storybook/react';
+import type { Preview } from '@storybook/react-vite';
 import i18n from './i18next';
 
 const preview: Preview = {
