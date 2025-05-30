@@ -18,6 +18,9 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
 
+      - name: Install pnpm
+        run: npm install -g pnpm
+
       - name: Build theme/custom
         run: pnpm install && pnpm --filter ./theme/custom... install && pnpm --filter ./theme/custom... build
       
