@@ -1,8 +1,6 @@
 import { Interest as PropsItem } from "../types";
 import {
   useTranslation,
-  withTranslation,
-  WithTranslation,
 } from "react-i18next";
 import { Section } from "./Section";
 import { SectionItem } from "./SectionItem";

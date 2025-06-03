@@ -4,12 +4,8 @@ import i18n from './i18next';
 
 const preview: Preview = {
   parameters: {
-    controls: {
-      matchers: {
-        color: /(background|color)$/i,
-        date: /Date$/,
-      },
-    },
+    layout: 'fullscreen',
+    
     i18n,
   },
   initialGlobals: {

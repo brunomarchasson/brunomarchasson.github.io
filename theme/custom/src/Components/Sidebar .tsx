@@ -1,23 +1,16 @@
 import React from "react";
-import { useTranslation } from "react-i18next";
 import { useResume } from "../resumeContext";
-// import styles from "./Sidebar.module.css";
 import { IconLib } from "./icons";
 import { BasicsLocation, BasicsProfile } from "../types";
 import { Skills } from "./Skills";
 import { Languages } from "./Languages";
+import { QRCodeSVG } from "qrcode.react";
 
-const Location: React.FC<BasicsLocation> = ({
-  address,
-  postalCode,
-  city,
-  region,
-  countryCode,
-}) => (
+const Location: React.FC<BasicsLocation> = ({ address, postalCode, city, region, countryCode }) => (
   <div className={"flex items-start icon-text"}>
-    <IconLib.envelope  />
+    <IconLib.envelope height="1em" />
     {"\u00A0"}
-    <span >
+    <span>
       {address && <span className="address">{address}, </span>}
       {postalCode && <span className="postalCode">{postalCode}, </span>}
       {city && <span className="city">{city}, </span>}
@@ -32,16 +25,10 @@ export const Contact: React.FC = () => {
 
   return (
     <div className={"contact"}>
-     
       {url && (
         <div className={"flex items-center icon-text"}>
-          <IconLib.web />
-          <a
-            className="hide-href-print"
-            target="_blank"
-            href={url}
-            rel="noreferrer"
-          >
+          <IconLib.web height="1em" />
+          <a className="hide-href-print" target="_blank" href={url} rel="noreferrer">
             {"\u00A0"}
             {url}
           </a>
@@ -49,7 +36,7 @@ export const Contact: React.FC = () => {
       )}
       {email && (
         <div className={"flex items-center icon-text"}>
-          <IconLib.email />
+          <IconLib.email height="1em" />
           <a className="hide-href-print" href={`mailto:${email}`}>
             {"\u00A0"}
             {email}
@@ -58,14 +45,14 @@ export const Contact: React.FC = () => {
       )}
       {phone && (
         <div className={"flex items-center icon-text"}>
-          <IconLib.phone />
+          <IconLib.phone height="1em" />
           <a className="hide-href-print" href="tel:{{phone}}">
             {"\u00A0"}
             {phone}
           </a>
         </div>
       )}
-       <Location {...location}></Location>
+      <Location {...location}></Location>
     </div>
   );
 };
@@ -75,7 +62,7 @@ const Profile: React.FC<BasicsProfile> = ({ network, username, url }) => {
   const Icon = IconLib[network.toLowerCase() as keyof typeof IconLib];
   return (
     <div className={"flex items-center icon-text"}>
-      {Icon && <Icon  />}
+      {Icon && <Icon height="1em" />}
       <span className={`${network.toLowerCase()}`}></span>
       {url ? (
         <span className="url">
@@ -95,36 +82,29 @@ const Profile: React.FC<BasicsProfile> = ({ network, username, url }) => {
 };
 
 export function Sidebar() {
-  const { t, i18n } = useTranslation();
   const resume = useResume();
-  const { image, name, profiles } = resume.basics ?? {};
+  const { image, name, profiles, url } = resume.basics ?? {};
   return (
-   
     <aside className={"sidebar"}>
       {image && <img className={"image"} src={image} alt={name} />}
       <div className={"name"}>{name}</div>
 
+      <div className={"sidebar__content"}>
+        <Contact />
+        {profiles && (
+          <div id={"profiles"}>
+            {profiles.map((profile, index) => (
+              <Profile {...profile} key={index} />
+            ))}
+          </div>
+        )}
 
-    <div className={"sidebar__content"}>
-
-      <Contact />
-      {profiles && (
-        <div id={"profiles"}>
-          {profiles.map((profile, index) => (
-            <Profile {...profile} key={index} />
-          ))}
-        </div>
-      )}
-  
-      {resume.skills && (
-        <Skills skills={resume.skills} className={"section mt-4 hideMobile"} />
-      )}
-      {resume.languages && (
-        <Languages languages={resume.languages} className={"section mt-4 hideMobile"} />
-      )}
-      
-    </div>
+        {resume.skills && <Skills skills={resume.skills} className={"section mt-4 hideMobile"} />}
+        {resume.languages && (
+          <Languages languages={resume.languages} className={"section mt-4 hideMobile"} />
+        )}
+        {url && <QRCodeSVG className="qr-code" value={url} />}
+      </div>
     </aside>
-  
   );
 }

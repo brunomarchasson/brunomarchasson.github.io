@@ -1,36 +1,23 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react-swc'
-import { NodeGlobalsPolyfillPlugin } from '@esbuild-plugins/node-globals-polyfill';
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react-swc";
+// import eslint from "vite-plugin-eslint";
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    // eslint(),
+  ],
   build: {
     ssr: true,
-  //   target: 'node20',
-    outDir: './dist',
+    //   target: 'node20',
+    outDir: "./dist",
     rollupOptions: {
-      input: './src/index.tsx',
-      external: ['react', 'react-dom/server'],
+      input: "./src/index.tsx",
+      external: ["react", "react-dom/server"],
       output: {
-        format: 'cjs', // <-- force CommonJS
-  //       entryFileNames: '[name].js',
+        format: "cjs", 
       },
     },
   },
-  // resolve: {
-  //   alias: {
-  //     // Aliases if needed
-  //   },
-  // },
-  // optimizeDeps: {
-  //   esbuildOptions: {
-  //     // Polyfills for Node.js globals and built-ins
-  //     plugins: [
-  //       NodeGlobalsPolyfillPlugin({
-  //         process: true,
-  //         buffer: true,
-  //       }),
-  //     ],
-  //   },
-  // },
+
 });

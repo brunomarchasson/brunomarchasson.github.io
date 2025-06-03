@@ -2,7 +2,7 @@ import { Resume } from './Resume';
 import { renderToString } from 'react-dom/server';
 import type { ResumeSchema as ResumeType } from './types';
 import { I18nextProvider } from 'react-i18next';
-import { createI18N, Language } from './i18n';
+import { createI18N } from './i18n';
 import fs from 'fs';
 import path from 'path';
 
@@ -14,6 +14,7 @@ function render(resume: ResumeType) {
   try {
     styles = fs.readFileSync(cssPath, 'utf8');
   } catch (e) {
+    console.error(e)
     styles = '';
   }
   const resumeHtml = renderToString(

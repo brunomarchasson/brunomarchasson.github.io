@@ -6,10 +6,13 @@
   "private": true,
   "scripts": {
     "init": "resumed init",
+    "lint": "eslint . --ignore-pattern dist/ --ignore-pattern **/dist/",
+    "lint:fix": "eslint . --fix --ignore-pattern dist/ --ignore-pattern **/dist/",
     "build": "rimraf dist && mkdir dist && resumed --theme jsonresume-theme-local --output dist/index.html && resumed export --theme jsonresume-theme-local  --output dist/resume.pdf",
     "start": "resumed --theme jsonresume-theme-local",
     "export": "resumed export --theme jsonresume-theme-local",
-    "pdf": "electron-pdf  ./dist/index.html ./dist/index.pdf"
+    "pdf": "electron-pdf  ./dist/index.html ./dist/index.pdf",
+    "format": "prettier --write ."
   },
   "keywords": [],
   "author": "",
@@ -21,14 +24,26 @@
     "puppeteer": "^24.9.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "resumed": "^5.0.0"
+    "resumed": "^5.0.0",
+    "vite": "6.3.5"
   },
   "devDependencies": {
+    "@eslint/js": "^9.28.0",
     "@types/node": "^22.15.21",
     "@types/react": "^19.1.5",
     "@types/react-dom": "^19.1.5",
     "esbuild": "^0.25.4",
+    "eslint": "^9.28.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-prettier": "^5.4.1",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^16.2.0",
+    "prettier": "^3.5.3",
     "ts-node": "^10.9.2",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.33.1",
+    "vite-plugin-eslint": "^1.8.1"
   }
 }

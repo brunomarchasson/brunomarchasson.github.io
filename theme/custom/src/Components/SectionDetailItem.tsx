@@ -42,9 +42,9 @@ export const SectionDetailItem = ({
             </span>
           )}
           {endDate ? (
-            <span>{FormatDate(endDate,dateFormat, i18n.language)}</span>
+            <span>{FormatDate(endDate, dateFormat, i18n.language)}</span>
           ) : (
-            <span>{`${t("Current")}`}</span>
+            startDate ? <span>{`${t("Current")}`}</span> : null
           )}
         </div>
         {title && <div className={"title"}>{title}
@@ -55,7 +55,7 @@ export const SectionDetailItem = ({
       {location && (
         <div className={"location"}>
           <div className={"flex items-start icon-text"}>
-            <IconLib.location />
+            <IconLib.location height="1em"/>
             {"\u00A0"}
             {location}
           </div>
