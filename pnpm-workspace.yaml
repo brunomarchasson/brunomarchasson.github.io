@@ -1,3 +1,6 @@
 onlyBuiltDependencies:
   - electron
   - highlight.js
+
+packages:
+  - 'theme/custom'

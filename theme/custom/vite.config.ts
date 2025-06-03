@@ -15,7 +15,7 @@ export default defineConfig({
       input: "./src/index.tsx",
       external: ["react", "react-dom/server"],
       output: {
-        format: "cjs", 
+        format: "esm", 
       },
     },
   },

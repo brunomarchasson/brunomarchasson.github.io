@@ -1,4 +1,3 @@
-import React from "react";
 import { ResumeSchema as ResumeProps } from "./types";
 import { Sidebar } from "./Components/Sidebar ";
 import { ResumeProvider } from "./resumeContext";
@@ -16,7 +15,7 @@ import { Skills } from './Components/Skills';
 import { Languages } from './Components/Languages';
 import { FloatingDownloadButton } from "./Components/FloatingDownloadButton";
 
-export const Resume: React.FC<ResumeProps> = (resume: ResumeProps) => {
+export const Resume = (resume: ResumeProps) => {
   
   return(
   <ResumeProvider value={resume}>

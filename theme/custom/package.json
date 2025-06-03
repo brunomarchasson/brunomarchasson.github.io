@@ -3,6 +3,10 @@
   "version": "2.1.2",
   "license": "MIT",
   "main": "dist/index.js",
+  "type": "module",
+  "bin": {
+    "jsonresume-theme-local": "./bin/generate.js"
+  },
   "exports": {
     "./en": "./dist/en/index.js",
     ".": "./dist/index.js"
@@ -48,7 +52,7 @@
     "preview": "vite preview",
     "lint": "pnpm eslint .",
     "prepublishOnly": "pnpm run clean && pnpm run build",
-    "clean": "rm -rf dist storybook-static",
+    "clean": "rimraf dist storybook-static",
     "prepare": "pnpm run build"
   },
   "files": [

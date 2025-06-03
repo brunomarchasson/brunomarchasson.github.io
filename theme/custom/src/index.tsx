@@ -5,7 +5,11 @@ import { I18nextProvider } from 'react-i18next';
 import { createI18N } from './i18n';
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 
+// Correction ESM/TypeScript : déclaration séparée
+const __filename: string = fileURLToPath(import.meta.url);
+const __dirname: string = path.dirname(__filename);
 
 function render(resume: ResumeType) {
   // Lecture du CSS à l'exécution
@@ -39,9 +43,3 @@ function render(resume: ResumeType) {
 };
 
 export { render };
-// Pour CommonJS (nécessaire pour resumed)
-module.exports = { render,
-  pdfRenderOptions: {
-    printBackground: true
-  }
- };
