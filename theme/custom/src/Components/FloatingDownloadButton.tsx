@@ -10,7 +10,7 @@ export const FloatingDownloadButton: React.FC = () => (
       id="menu-open"
     />
     <label className="menu-open-button clay" htmlFor="menu-open">
-      <IconLib.download />
+      <IconLib.download size= "1em" />
     </label>
     <a href="resume.pdf" download="resume.pdf"  className="menu-item clay">
         <IconLib.pdf />

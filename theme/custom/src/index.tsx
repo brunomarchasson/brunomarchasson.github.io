@@ -1,5 +1,6 @@
 import { Resume } from './Resume';
-import { renderToString } from 'react-dom/server';
+import { renderToPipeableStream } from 'react-dom/server';
+import { PassThrough } from 'stream';
 import type { ResumeSchema as ResumeType } from './types';
 import { I18nextProvider } from 'react-i18next';
 import { createI18N } from './i18n';
@@ -11,7 +12,7 @@ import { fileURLToPath } from 'url';
 const __filename: string = fileURLToPath(import.meta.url);
 const __dirname: string = path.dirname(__filename);
 
-function render(resume: ResumeType) {
+async function render(resume: ResumeType) {
   // Lecture du CSS à l'exécution
   const cssPath = path.resolve(__dirname, '../style.css');
   let styles = '';
@@ -21,11 +22,34 @@ function render(resume: ResumeType) {
     console.error(e)
     styles = '';
   }
-  const resumeHtml = renderToString(
-    <I18nextProvider i18n={createI18N('fr')}>
-      <Resume {...resume} />
-    </I18nextProvider>
-  );
+  // Utilisation de renderToPipeableStream pour le rendu streaming
+  const stream = new PassThrough();
+  let html = '';
+  const promise = new Promise<string>((resolve, reject) => {
+    const { pipe } = renderToPipeableStream(
+      <I18nextProvider i18n={createI18N('fr')}>
+        <Resume {...resume} />
+      </I18nextProvider>,
+      {
+        onAllReady() {
+          pipe(stream);
+        },
+        onError(err) {
+          reject(err);
+        }
+      }
+    );
+    stream.on('data', chunk => {
+      html += chunk.toString();
+    });
+    stream.on('end', () => {
+      resolve(html);
+    });
+    stream.on('error', err => {
+      reject(err);
+    });
+  });
+  const resumeHtml = await promise;
   return `<!doctype html><html lang="en"><head>
     <meta charSet="UTF-8" />
     <meta

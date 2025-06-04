@@ -3,8 +3,9 @@ import { renderToString } from 'vue/server-renderer';
 import App from './App.vue';
 import fs from 'fs';
 import path from 'path';
+import { ResumeSchema } from './types';
 
-export async function render(resume: any) {
+export async function render(resume: ResumeSchema): Promise<string> {
   const app = createSSRApp({
     render: () => h(App, { resume })
   });
@@ -15,6 +16,7 @@ export async function render(resume: any) {
   try {
     styles = fs.readFileSync(cssPath, 'utf8');
   } catch (e) {
+    console.error(e)
     styles = '';
   }
 

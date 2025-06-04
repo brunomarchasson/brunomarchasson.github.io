@@ -4,7 +4,7 @@ import { IconLib } from "./icons";
 import { BasicsLocation, BasicsProfile } from "../types";
 import { Skills } from "./Skills";
 import { Languages } from "./Languages";
-import { QRCodeSVG } from "qrcode.react";
+import QRCode from "./QRCode";
 
 const Location: React.FC<BasicsLocation> = ({ address, postalCode, city, region, countryCode }) => (
   <div className={"flex items-start icon-text"}>
@@ -93,8 +93,8 @@ export function Sidebar() {
         <Contact />
         {profiles && (
           <div id={"profiles"}>
-            {profiles.map((profile, index) => (
-              <Profile {...profile} key={index} />
+            {profiles.map((profile) => (
+              <Profile {...profile} key={profile.network} />
             ))}
           </div>
         )}
@@ -103,7 +103,7 @@ export function Sidebar() {
         {resume.languages && (
           <Languages languages={resume.languages} className={"section mt-4 hideMobile"} />
         )}
-        {url && <QRCodeSVG className="qr-code" value={url} />}
+        {url && <QRCode value={url} />}
       </div>
     </aside>
   );
