@@ -1,0 +1,32 @@
+---
+import resume from '../resume.json';
+import Basics from '../components/Basics.astro';
+import Work from '../components/Work.astro';
+import Education from '../components/Education.astro';
+import Skills from '../components/Skills.astro';
+import Projects from '../components/Projects.astro';
+---
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{resume.basics.name} - CV</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <main>
+      <Basics basics={resume.basics} />
+      <Skills skills={resume.skills} />
+      <Work work={resume.work} />
+      <Projects projects={resume.projects} />
+      <Education education={resume.education} />
+      <section>
+        <h2>Langues</h2>
+        <ul>
+          {resume.languages && resume.languages.map(lang => (
+            <li><strong>{lang.language} :</strong> {lang.fluency}</li>
+          ))}
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>

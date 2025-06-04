@@ -1,0 +1,18 @@
+---
+import type { Education } from "../types";
+
+interface Props {
+  education: Education[];
+}
+const { education } = Astro.props;
+---
+<section>
+  <h2>Formation</h2>
+  {education.map(edu => (
+    <article>
+      <h3>{edu.studyType} - {edu.area}</h3>
+      <p>{edu.institution}</p>
+      <p><strong>Période :</strong> {edu.startDate} - {edu.endDate}</p>
+    </article>
+  ))}
+</section>

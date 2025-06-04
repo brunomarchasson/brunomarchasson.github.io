@@ -1,0 +1,22 @@
+---
+import type { Skill } from "../types";
+
+interface Props {
+  skills: Skill[];
+}
+
+const { skills } = Astro.props;
+---
+
+<section>
+  <h2>Compétences</h2>
+  <ul>
+    {
+      skills.map((skill) => (
+        <li>
+          <strong>{skill.name} :</strong> {skill.keywords && skill.keywords.join(", ")}
+        </li>
+      ))
+    }
+  </ul>
+</section>

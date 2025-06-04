@@ -1,0 +1,30 @@
+---
+import type { Basics } from "../types";
+
+interface Props {
+  basics: Basics;
+}
+
+const { basics } = Astro.props;
+---
+
+<section>
+  <h1>{basics.name}</h1>
+  <h2>{basics.label}</h2>
+  <p><strong>Email :</strong> {basics.email}</p>
+  <p><strong>Téléphone :</strong> {basics.phone}</p>
+  {basics.location && <p><strong>Localisation :</strong> {basics.location.city}, {basics.location.countryCode}</p>}
+  <p>{basics.summary}</p>
+  <ul>
+    {
+      basics.profiles &&
+        basics.profiles.map((profile) => (
+          <li>
+            <a href={profile.url} target="_blank">
+              {profile.network}
+            </a>
+          </li>
+        ))
+    }
+  </ul>
+</section>

@@ -1,0 +1,22 @@
+---
+import type { Project } from "../types";
+
+interface Props {
+  projects: Project[];
+}
+
+const { projects } = Astro.props;
+---
+<section>
+  <h2>Projets</h2>
+  {projects.map(project => (
+    <article>
+      <h3>{project.name}</h3>
+      <p>{project.description}</p>
+      <ul>
+        {project.highlights && project.highlights.map(h => <li>{h}</li>)}
+      </ul>
+      <p><strong>Mots-clés :</strong> {project.keywords && project.keywords.join(', ')}</p>
+    </article>
+  ))}
+</section>

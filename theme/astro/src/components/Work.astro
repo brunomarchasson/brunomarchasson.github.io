@@ -1,0 +1,29 @@
+---
+import type { Work } from "../types";
+
+interface Props {
+  work: Work[];
+}
+const { work } = Astro.props;
+---
+
+<section>
+  <h2>Expériences professionnelles</h2>
+  {
+    work.map((job) => (
+      <article>
+        <h3>
+          {job.position} - {job.name}
+        </h3>
+        <p>
+          <strong>Période :</strong> {job.startDate} - {job.endDate}
+        </p>
+        <p>{job.summary}</p>
+        <ul>{job.highlights && job.highlights.map((h) => <li>{h}</li>)}</ul>
+        <p>
+          <strong>Mots-clés :</strong> {job.keywords && job.keywords.join(", ")}
+        </p>
+      </article>
+    ))
+  }
+</section>

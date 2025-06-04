@@ -900,7 +900,7 @@
 
   /* Style du code QR */
   .qr-code {
-    /* display: none */
+    display: none
     
     margin: 0 auto;
     svg{
