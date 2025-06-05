@@ -570,6 +570,16 @@
       display: none;
     }
   }
+
+  .touch-target {
+    min-height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+
 }
 
 /**

@@ -19,6 +19,12 @@ export const Resume = (resume: ResumeProps) => {
   
   return(
   <ResumeProvider value={resume}>
+    <meta name="description" content="CV de ${resume.basics?.name || ''}${resume.basics?.label ? ' – ' + resume.basics.label : ''}"/>
+    <meta name="author" content="${resume.basics?.name || ''}"/>
+    <meta property="og:title" content="${resume.basics?.name || 'CV'}"/>
+    <meta property="og:description" content="${resume.basics?.summary || ''}"/>
+    <meta property="og:type" content="profile"/>
+    <meta property="og:locale" content="fr_FR"></meta>
     <main className={"resume"}>
       <Sidebar />
      {resume.basics && <Basics {...resume.basics} />}

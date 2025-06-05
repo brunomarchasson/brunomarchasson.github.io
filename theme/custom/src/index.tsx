@@ -69,9 +69,6 @@ async function render(resume: ResumeType) {
   template = template.replace('<div id="root"></div>', `<div id="root">${resumeHtml}</div>`);
   // Suppression de la balise <script type="module" src="main.tsx"></script> (pour build/export)
   template = template.replace(/<script[^>]*src=["']main\.tsx["'][^>]*><\/script>/, '');
-  // Ajout de balises meta SEO dans le <head>
-  const metaSeo = `\n    <meta name="description" content="CV de ${resume.basics?.name || ''}${resume.basics?.label ? ' – ' + resume.basics.label : ''}">\n    <meta name="author" content="${resume.basics?.name || ''}">\n    <meta property="og:title" content="${resume.basics?.name || 'CV'}">\n    <meta property="og:description" content="${resume.basics?.summary || ''}">\n    <meta property="og:type" content="profile">\n    <meta property="og:locale" content="fr_FR">\n  `;
-  template = template.replace('<meta charset="UTF-8" />', '<meta charset="UTF-8" />' + metaSeo);
   // Injection du CSS minifié dans le <head> (avant </head>)
   template = template.replace('</head>', `<style>${styles}</style>\n</head>`);
   // Remplacement du <title> si besoin

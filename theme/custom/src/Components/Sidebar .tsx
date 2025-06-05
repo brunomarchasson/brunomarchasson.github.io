@@ -28,25 +28,36 @@ export const Contact: React.FC = () => {
       {url && (
         <div className={"flex items-center icon-text"}>
           <IconLib.web height="1em" />
-          <a className="hide-href-print" target="_blank" href={url} rel="noreferrer">
+          <a
+            className="hide-href-print touch-target"
+            target="_blank"
+            href={url}
+            rel="noreferrer"
+          >
             {"\u00A0"}
             {url}
           </a>
         </div>
       )}
       {email && (
-        <div className={"flex items-center icon-text"}>
+        <div className={"flex items-center icon-text "}>
           <IconLib.email height="1em" />
-          <a className="hide-href-print" href={`mailto:${email}`}>
+          <a
+            className="hide-href-print touch-target"
+            href={`mailto:${email}`}
+          >
             {"\u00A0"}
             {email}
           </a>
         </div>
       )}
       {phone && (
-        <div className={"flex items-center icon-text"}>
+        <div className={"flex items-center icon-text "}>
           <IconLib.phone height="1em" />
-          <a className="hide-href-print" href={`tel:${phone}`}>
+          <a
+            className="hide-href-print touch-target"
+            href={`tel:${phone}`}
+          >
             {"\u00A0"}
             {phone}
           </a>
@@ -66,7 +77,12 @@ const Profile: React.FC<BasicsProfile> = ({ network, username, url }) => {
       <span className={`${network.toLowerCase()}`}></span>
       {url ? (
         <span className="url">
-          <a target="_blank" href={url} rel="noreferrer">
+          <a
+            className="touch-target"
+            target="_blank"
+            href={url}
+            rel="noreferrer"
+          >
             {"\u00A0"}
             {username}
           </a>
