@@ -95,6 +95,7 @@
  * Reset des styles par défaut du navigateur
  */
 @layer reset {
+
   /* Box-sizing border-box pour une meilleure gestion des tailles */
   html {
     box-sizing: border-box;
@@ -246,6 +247,7 @@
  * Styles communs à l'ensemble du site
  */
 @layer commons {
+
   /* Styles de base pour le body et le html */
   body,
   html {
@@ -307,7 +309,8 @@
 
   /* Style des blockquotes */
   blockquote {
-    text-indent: -0.45em; /* Fallback */
+    text-indent: -0.45em;
+    /* Fallback */
     padding: 1em;
     quotes: "“" "”" "‘" "’";
   }
@@ -339,6 +342,7 @@
  * Classes utilitaires réutilisables
  */
 @layer utility {
+
   /* Style des icones dans le texte */
   .icon-text {
     svg {
@@ -560,7 +564,7 @@
     }
   }
 
-  @media screen and (width >= 768px),
+  @media screen and (width >=768px),
   print {
     .hideDesktop {
       display: none;
@@ -573,6 +577,7 @@
  * Styles spécifiques aux composants
  */
 @layer components {
+
   /* Styles du menu */
   .menu {
     filter: url("#goo");
@@ -623,10 +628,10 @@
     transition-duration: 500ms;
     transform: scale(0);
   }
-  
+
   .menu-item:nth-child(4) {
     transition-duration: 500ms;
-    
+
     transition-delay: 250ms;
     transform: scale(0);
   }
@@ -663,7 +668,7 @@
   .menu-open:checked~.menu-item:nth-child(4) {
     transition-duration: 250ms;
     transition-delay: 0ms;
-    transform:  scale(1) translate3d(0, 60px, 0);
+    transform: scale(1) translate3d(0, 60px, 0);
   }
 
   /* Styles du bouton de téléchargement flottant */
@@ -906,14 +911,16 @@
   /* Style du code QR */
   .qr-code {
     display: none;
-    
+
     margin: 0 auto;
-    svg{
+
+    svg {
       border-radius: var(--border-radius);
     }
+
     canvas {
       border-radius: var(--border-radius);
-      
+
     }
   }
 }
@@ -1020,7 +1027,7 @@
 
   .qr-code {
     display: block;
-    
+
   }
 
   .section>header {
@@ -1033,7 +1040,7 @@
   }
 
   @page {
-    size: a4; 
+    size: a4;
     margin: 0;
   }
 }
