@@ -9,15 +9,20 @@ export default defineConfig({
   ],
   build: {
     ssr: true,
-    //   target: 'node20',
     outDir: "./dist",
     rollupOptions: {
       input: "./src/index.tsx",
       external: ["react", "react-dom/server"],
       output: {
-        format: "esm", 
+        format: "esm",
       },
     },
   },
-
+  server: {
+    open: true,
+    fs: {
+      allow: ["..", "."],
+    },
+  },
+  root: './src',
 });

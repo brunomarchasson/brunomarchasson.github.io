@@ -7,6 +7,7 @@ import { createI18N } from './i18n';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import CleanCSS from 'clean-css';
 
 // Correction ESM/TypeScript : déclaration séparée
 const __filename: string = fileURLToPath(import.meta.url);
@@ -17,7 +18,8 @@ async function render(resume: ResumeType) {
   const cssPath = path.resolve(__dirname, '../style.css');
   let styles = '';
   try {
-    styles = fs.readFileSync(cssPath, 'utf8');
+    const rawStyles = fs.readFileSync(cssPath, 'utf8');
+    styles = new CleanCSS({}).minify(rawStyles).styles;
   } catch (e) {
     console.error(e)
     styles = '';

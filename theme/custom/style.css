@@ -59,7 +59,8 @@
 
     /* Couleurs principales */
     --color-primary: var(--primary-500);
-    --color-on-primary: var(--neutral-100);
+    --color-on-primary: var(--secondary-900);
+
     --color-secondary: var(--secondary-500);
     --color-on-secondary: var(--neutral-100);
     --color-accent: var(--accent-500);
@@ -67,7 +68,7 @@
     --color-error: var(--primary-500);
 
     /* Arrière-plan et texte */
-    --color-background: var(--primary-200);
+    --color-background: var(--primary-100);
     --color-text: var(--secondary-500);
   }
 
@@ -619,12 +620,14 @@
   }
 
   .menu-item:nth-child(3) {
-    transition-duration: 1000ms;
+    transition-duration: 500ms;
     transform: scale(0);
   }
-
+  
   .menu-item:nth-child(4) {
     transition-duration: 500ms;
+    
+    transition-delay: 250ms;
     transform: scale(0);
   }
 
@@ -653,11 +656,13 @@
 
   .menu-open:checked~.menu-item:nth-child(3) {
     transition-duration: 500ms;
+    transition-delay: 0ms;
     transform: scale(1) translate3d(0px, 120px, 0);
   }
 
   .menu-open:checked~.menu-item:nth-child(4) {
-    transition-duration: 500ms;
+    transition-duration: 250ms;
+    transition-delay: 0ms;
     transform:  scale(1) translate3d(0, 60px, 0);
   }
 
@@ -806,7 +811,7 @@
     left: 0;
     top: 50%;
     height: 1px;
-    background: var(--color-primary);
+    background: var(--color-secondary);
     content: '';
     width: 100%;
     display: block;
@@ -825,7 +830,7 @@
     text-align: center;
     letter-spacing: .625em;
     background-color: var(--color-background);
-    color: var(--color-primary);
+    color: var(--color-secondary);
   }
 
   /* Styles des items de détails de section */
@@ -900,7 +905,7 @@
 
   /* Style du code QR */
   .qr-code {
-    display: none
+    display: none;
     
     margin: 0 auto;
     svg{

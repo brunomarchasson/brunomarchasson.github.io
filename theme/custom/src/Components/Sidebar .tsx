@@ -86,7 +86,7 @@ export function Sidebar() {
   const { image, name, profiles, url } = resume.basics ?? {};
   return (
     <aside className={"sidebar"}>
-      {image && <img className={"image"} src={image} alt={name} />}
+      {image && <img className={"image"} width={248} height={248} src={image} alt={name} />}
       <div className={"name"}>{name}</div>
 
       <div className={"sidebar__content"}>
