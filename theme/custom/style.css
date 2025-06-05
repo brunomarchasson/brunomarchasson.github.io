@@ -841,7 +841,8 @@
   /* Styles des items de détails de section */
   .section-detail-item {
     page-break-inside: avoid;
-
+    list-style-type: none;
+    margin-left: 0;
     header {
       display: grid;
       grid-template-columns: 1fr max-content;
@@ -867,6 +868,7 @@
       display: flex;
       flex-wrap: wrap;
       font-weight: 700;
+      font-size: inherit;
     }
 
     .subTitle {
@@ -881,6 +883,8 @@
 
   /* Styles des items de section */
   .section-item {
+        list-style-type: none;
+    margin-left: 0;
     .level {
       margin-bottom: 0.5em;
     }
@@ -979,7 +983,7 @@
     }
 
     .section {
-      order: 2
+      order: 2;
     }
   }
 
@@ -1035,6 +1039,7 @@
   }
 
   .section-detail-item {
+
     display: block;
     break-inside: avoid;
   }

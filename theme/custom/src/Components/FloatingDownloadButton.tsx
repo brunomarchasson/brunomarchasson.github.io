@@ -7,7 +7,6 @@ export const FloatingDownloadButton: React.FC = () => (
     <label
       className="menu-open-button clay"
       htmlFor="menu-open"
-      role="button"
       aria-label="Open menu"
       tabIndex={0}
     >
@@ -36,7 +35,6 @@ export const FloatingDownloadButton: React.FC = () => (
           <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
           <feColorMatrix
             in="blur"
-            mode="matrix"
             values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
             result="goo"
           />

@@ -15,13 +15,15 @@ export const Languages = ({
     <>
       {languages.length && (
         <Section title={t("Languages")} className={className}>
-          {languages.map((language, index) => (
-            <SectionItem
-              key={index}
-              name={language.language}
-              level={language.fluency}
-            ></SectionItem>
-          ))}
+          <ul>
+            {languages.map((language, index) => (
+              <SectionItem
+                key={index}
+                name={language.language}
+                level={language.fluency}
+              ></SectionItem>
+            ))}
+          </ul>
         </Section>
       )}
     </>

@@ -46,7 +46,7 @@ export const Contact: React.FC = () => {
       {phone && (
         <div className={"flex items-center icon-text"}>
           <IconLib.phone height="1em" />
-          <a className="hide-href-print" href="tel:{{phone}}">
+          <a className="hide-href-print" href={`tel:${phone}`}>
             {"\u00A0"}
             {phone}
           </a>

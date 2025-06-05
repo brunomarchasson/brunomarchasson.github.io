@@ -8,16 +8,18 @@ export const Publications = ({ publications }: { publications: PropsItem[] }) =>
 
   return publications.length > 0 ? (
     <Section title={t("Publications") + "(" + publications.length + ")"}>
-      {publications.map((item, index) => (
-        <SectionDetailItem
-          key={index}
-          {...item}
-          title={item.name}
-          subTitle={item.publisher}
-          endDate={item.releaseDate}
-          dateFormat="dd LLL yyyy"
-        />
-      ))}
+      <ul>
+        {publications.map((item, index) => (
+          <SectionDetailItem
+            key={index}
+            {...item}
+            title={item.name}
+            subTitle={item.publisher}
+            endDate={item.releaseDate}
+            dateFormat="dd LLL yyyy"
+          />
+        ))}
+      </ul>
     </Section>
   ) : null;
 };

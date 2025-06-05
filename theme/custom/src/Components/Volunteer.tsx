@@ -7,15 +7,16 @@ export const Volunteer = ({ volunteer }: { volunteer: VolunteerInterface[] }) =>
   const { t } = useTranslation();
   return volunteer.length > 0 ? (
     <Section title={t("Volunteer") + "(" + volunteer.length + ")"}>
-      {volunteer.map((item, index) => (
-        <SectionDetailItem
-          key={index}
-          {...item}
-          title={item.position}
-          subTitle={item.organization}
-          
-        />
-      ))}
+      <ul>
+        {volunteer.map((item, index) => (
+          <SectionDetailItem
+            key={index}
+            {...item}
+            title={item.position}
+            subTitle={item.organization}
+          />
+        ))}
+      </ul>
     </Section>
   ) : null;
 };

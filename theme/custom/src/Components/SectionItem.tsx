@@ -5,7 +5,7 @@ type Props = { name?: string; level?: string; keywords?: string[] };
 
 export function SectionItem({ name, level, keywords }: Props) {
   return (
-    <div className={"section-item"}>
+    <li className={"section-item"}>
       {name && <h3 >{name}</h3>}
       {level && (
         <div className={`${"styles.level"} ${level.toLowerCase()}`}>
@@ -13,7 +13,7 @@ export function SectionItem({ name, level, keywords }: Props) {
         </div>
       )}
       {keywords?.length && <TagList tags={keywords} />}
-    </div>
+    </li>
   );
 }
 

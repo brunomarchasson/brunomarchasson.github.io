@@ -8,16 +8,18 @@ export const Certificates = ({ certificates }: { certificates: PropsItem[] }) =>
 
   return certificates.length > 0 ? (
     <Section title={t("Certificates") + "(" + certificates.length + ")"}>
-      {certificates.map((item, index) => (
-        <SectionDetailItem
-          key={index}
-          {...item}
-          title={item.name}
-          endDate={item.date}
-          subTitle={item.issuer}
-          dateFormat="yyyy"
-        />
-      ))}
+      <ul>
+        {certificates.map((item, index) => (
+          <SectionDetailItem
+            key={index}
+            {...item}
+            title={item.name}
+            endDate={item.date}
+            subTitle={item.issuer}
+            dateFormat="yyyy"
+          />
+        ))}
+      </ul>
     </Section>
   ) : null;
 };

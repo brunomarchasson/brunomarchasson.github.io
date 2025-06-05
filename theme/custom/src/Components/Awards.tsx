@@ -8,16 +8,18 @@ export const Awards = ({ awards }: { awards: PropsItem[] }) => {
 
   return awards.length > 0 ? (
     <Section title={t("Awards") + "(" + awards.length + ")"}>
-      {awards.map((item, index) => (
-        <SectionDetailItem
-          key={index}
-          {...item}
-          title={item.title}
-          endDate={item.date}
-          subTitle={item.awarder}
-          dateFormat="yyyy"
-        />
-      ))}
+      <ul>
+        {awards.map((item, index) => (
+          <SectionDetailItem
+            key={index}
+            {...item}
+            title={item.title}
+            endDate={item.date}
+            subTitle={item.awarder}
+            dateFormat="yyyy"
+          />
+        ))}
+      </ul>
     </Section>
   ) : null;
 };

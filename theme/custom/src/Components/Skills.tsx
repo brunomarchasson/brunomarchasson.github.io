@@ -7,14 +7,16 @@ export const Skills = ({ skills, className }: { skills: Skill[]; className?: str
   const { t } = useTranslation();
   return skills.length > 0 ? (
     <Section title={t("Skills")} className={className}>
-      {skills.map((skill, index) => (
-        <SectionItem
-          key={index}
-          name={skill.name}
-          level={skill.level}
-          keywords={skill.keywords}
-        ></SectionItem>
-      ))}
+      <ul>
+        {skills.map((skill, index) => (
+          <SectionItem
+            key={index}
+            name={skill.name}
+            level={skill.level}
+            keywords={skill.keywords}
+          ></SectionItem>
+        ))}
+      </ul>
     </Section>
   ) : null;
 };

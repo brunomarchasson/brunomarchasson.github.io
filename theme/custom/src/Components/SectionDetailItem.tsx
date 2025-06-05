@@ -15,7 +15,7 @@ type Props = {
   endDate?: Iso8601;
   highlights?: string[];
   keywords?: string[];
-  dateFormat?:string
+  dateFormat?: string;
 };
 
 export const SectionDetailItem = ({
@@ -28,11 +28,11 @@ export const SectionDetailItem = ({
   endDate,
   highlights,
   keywords,
-  dateFormat
+  dateFormat,
 }: Props) => {
   const { t, i18n } = useTranslation();
   return (
-    <section className={"section-detail-item"}>
+    <li className={"section-detail-item"}>
       <header>
         <div className={"dates"}>
           {startDate && (
@@ -43,19 +43,22 @@ export const SectionDetailItem = ({
           )}
           {endDate ? (
             <span>{FormatDate(endDate, dateFormat, i18n.language)}</span>
-          ) : (
-            startDate ? <span>{`${t("Current")}`}</span> : null
-          )}
+          ) : startDate ? (
+            <span>{`${t("Current")}`}</span>
+          ) : null}
         </div>
-        {title && <div className={"title"}>{title}
-        {subTitle && <div className={"subTitle"}>{subTitle}</div>}
-          </div>}
+        {title && (
+          <h3 className={"title"}>
+            {title}
+            {subTitle && <div className={"subTitle"}>{subTitle}</div>}
+          </h3>
+        )}
       </header>
 
       {location && (
         <div className={"location"}>
           <div className={"flex items-start icon-text"}>
-            <IconLib.location height="1em"/>
+            <IconLib.location height="1em" />
             {"\u00A0"}
             {location}
           </div>
@@ -74,7 +77,6 @@ export const SectionDetailItem = ({
 
       {keywords?.length && <TagList tags={keywords} />}
 
-
       <div>
         {summary && <div className="summary">{summary}</div>}
 
@@ -86,6 +88,6 @@ export const SectionDetailItem = ({
           </ul>
         )}
       </div>
-    </section>
+    </li>
   );
 };

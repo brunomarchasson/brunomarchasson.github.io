@@ -7,14 +7,16 @@ export const Projects = ({ projects }: { projects: Project[] }) => {
   const { t } = useTranslation();
   return projects.length > 0 ? (
     <Section title={t("Projects") + "(" + projects.length + ")"}>
-      {projects.map((project, index) => (
-        <SectionDetailItem
-          key={index}
-          {...project}
-          title={project.name}
-          summary={project.description}
-        />
-      ))}
+      <ul>
+        {projects.map((project, index) => (
+          <SectionDetailItem
+            key={index}
+            {...project}
+            title={project.name}
+            summary={project.description}
+          />
+        ))}
+      </ul>
     </Section>
   ) : null;
 };

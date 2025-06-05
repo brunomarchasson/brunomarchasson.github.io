@@ -5,10 +5,10 @@ export const Basics: React.FC<BasicsProps> = (props) => {
 
   return (
     <>
-      <header className="mb-4 ">
-        <h1 className="text-center font-bold uppercase">{label}</h1>
+      <header className="mb-4">
+        <h1 className="mb-4 text-center font-bold uppercase">{label}</h1>
+        {summary}
       </header>
-      {summary && <section className="mb-4">{summary}</section>}
     </>
   );
 };

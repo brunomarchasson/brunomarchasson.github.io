@@ -19,7 +19,7 @@ export const Resume = (resume: ResumeProps) => {
   
   return(
   <ResumeProvider value={resume}>
-    <div className={"resume"}>
+    <main className={"resume"}>
       <Sidebar />
      {resume.basics && <Basics {...resume.basics} />}
          {resume.skills && (
@@ -39,6 +39,6 @@ export const Resume = (resume: ResumeProps) => {
          {resume.references && <References references={resume.references} />}
      
       <FloatingDownloadButton />
-    </div>
+    </main>
   </ResumeProvider>
 )};
