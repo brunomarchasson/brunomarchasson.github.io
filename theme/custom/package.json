@@ -2,14 +2,14 @@
   "name": "jsonresume-theme-local",
   "version": "2.1.2",
   "license": "MIT",
-  "main": "dist/index.js",
+  "main": "dist/ssr/index.js",
   "type": "module",
   "bin": {
     "jsonresume-theme-local": "./bin/generate.js"
   },
   "exports": {
     "./en": "./dist/en/index.js",
-    ".": "./dist/index.js"
+    ".": "./dist/ssr/index.js"
   },
   "dependencies": {
     "@icons-pack/react-simple-icons": "^12.8.0",
