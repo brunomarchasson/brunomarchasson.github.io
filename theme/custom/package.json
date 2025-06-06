@@ -16,7 +16,6 @@
     "@lucide/lab": "^0.1.2",
     "@vitejs/plugin-react-swc": "^3.10.0",
     "clsx": "^2.1.1",
-    "csso": "^5.0.5",
     "i18next": "^25.2.0",
     "i18next-browser-languagedetector": "^8.1.0",
     "i18next-http-backend": "^3.0.2",
@@ -31,22 +30,21 @@
   },
   "devDependencies": {
     "@esbuild-plugins/node-globals-polyfill": "^0.2.3",
-    "cssnano": "^7.0.7",
     "eslint": "^9.27.0",
-    "postcss": "^8.5.4",
-    "postcss-cli": "^11.0.1",
     "typescript": "^5.8.3",
     "vite": "^6.3.5"
   },
   "scripts": {
     "dev": "vite dev --config vite.config.ts",
-    "build": "pnpm run minify:css && vite build --config vite.config.ts",
+    "build:client": "vite build --config vite.config.ts --outDir dist/client",
+    "build:ssr": "set VITE_SSR_BUILD=1 && vite build --config vite.config.ts --outDir dist/ssr",
+    "postbuild:copy-assets": "npx shx cp -r dist/client/assets dist/ssr/assets",
+    "build": "pnpm run build:client && pnpm run build:ssr && pnpm run postbuild:copy-assets",
     "preview": "vite preview",
     "lint": "pnpm eslint .",
     "prepublishOnly": "pnpm run clean && pnpm run build",
     "clean": "rimraf dist storybook-static",
-    "prepare": "pnpm run build",
-    "minify:css": "postcss style.css -o style.min.css"
+    "prepare": "pnpm run build"
   },
   "files": [
     "dist",

@@ -15,7 +15,7 @@ async function main() {
     process.exit(1);
   }
   const resume = JSON.parse(fs.readFileSync(resumePath, 'utf8'));
-  const distIndexUrl = pathToFileURL(path.resolve(__dirname, '../dist/index.js')).href;
+  const distIndexUrl = pathToFileURL(path.resolve(__dirname, '../dist/ssr/index.js')).href;
   const { render } = await import(distIndexUrl);
   const html = await render(resume);
   process.stdout.write(html);
