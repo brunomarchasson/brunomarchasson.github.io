@@ -30,6 +30,7 @@
   },
   "devDependencies": {
     "@esbuild-plugins/node-globals-polyfill": "^0.2.3",
+    "cross-env": "^7.0.3",
     "eslint": "^9.27.0",
     "typescript": "^5.8.3",
     "vite": "^6.3.5"
@@ -37,7 +38,7 @@
   "scripts": {
     "dev": "vite dev --config vite.config.ts",
     "build:client": "vite build --config vite.config.ts --outDir dist/client",
-    "build:ssr": "set VITE_SSR_BUILD=1 && vite build --config vite.config.ts --outDir dist/ssr",
+    "build:ssr": "cross-env VITE_SSR_BUILD=1 && vite build --config vite.config.ts --outDir dist/ssr",
     "postbuild:copy-assets": "npx shx cp -r dist/client/assets dist/ssr/assets",
     "build": "pnpm run build:client && pnpm run build:ssr && pnpm run postbuild:copy-assets",
     "preview": "vite preview",
