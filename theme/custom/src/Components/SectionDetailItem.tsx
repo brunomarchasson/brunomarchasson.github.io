@@ -50,7 +50,7 @@ export const SectionDetailItem = ({
         {title && (
           <h3 className={"title"}>
             {title}
-            {subTitle && <div className={"subTitle"}>{subTitle}</div>}
+            {subTitle && <span className={"subTitle"}>{subTitle}</span>}
           </h3>
         )}
       </header>

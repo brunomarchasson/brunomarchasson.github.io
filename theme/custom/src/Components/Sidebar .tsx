@@ -56,7 +56,7 @@ export const Contact: React.FC = () => {
           <IconLib.phone height="1em" />
           <a
             className="hide-href-print touch-target"
-            href={`tel:${phone}`}
+            href={`tel:${phone.replace(/\s+/g, '')}`}
           >
             {"\u00A0"}
             {phone}
