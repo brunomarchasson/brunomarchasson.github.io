@@ -38,8 +38,8 @@
   "scripts": {
     "dev": "vite dev --config vite.config.ts",
     "build:client": "vite build --config vite.config.ts --outDir dist/client",
-    "build:ssr": "cross-env VITE_SSR_BUILD=1 && vite build --config vite.config.ts --outDir dist/ssr",
-    "postbuild:copy-assets": "npx shx cp -r dist/client/assets dist/ssr/assets",
+    "build:ssr": "cross-env VITE_SSR_BUILD=1 vite build --config vite.config.ts --outDir dist/ssr",
+    "postbuild:copy-assets": "npx shx cp -r dist/client/assets dist/ssr",
     "build": "pnpm run build:client && pnpm run build:ssr && pnpm run postbuild:copy-assets",
     "preview": "vite preview",
     "lint": "pnpm eslint .",
