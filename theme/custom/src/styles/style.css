@@ -850,6 +850,7 @@
     letter-spacing: .625em;
     background-color: var(--color-background);
     color: var(--color-secondary);
+    page-break-inside: avoid;
   }
 
   /* Styles des items de détails de section */
@@ -862,6 +863,7 @@
       grid-template-columns: 1fr max-content;
     }
 
+    
     margin-bottom: 1rem;
 
     .dates {
@@ -895,7 +897,9 @@
       }
     }
   }
-
+.page-break{
+      break-before: page;
+    }
   /* Styles des items de section */
   .section-item {
         list-style-type: none;
@@ -1029,13 +1033,16 @@
     display: block;
     padding-bottom: 0;
     height: 100%;
+    /* margin: 0; */
+    padding: 1rem;
   }
 
   .sidebar {
     float: left;
     z-index: -1;
     width: 35ch;
-    height: Calc(100VH - 2rem);
+    height: Calc(100vh - 2rem);
+    /* height: 100vh; */
     /* margin: -1rem 1rem 0 -1rem; */
   }
 
@@ -1045,7 +1052,7 @@
   }
 
   .qr-code {
-    display: block;
+    /* display: block; */
 
   }
 
@@ -1061,7 +1068,7 @@
 
   @page {
     size: a4;
-    /* margin: 0; */
+    padding: 1rem;
   }
 }
 

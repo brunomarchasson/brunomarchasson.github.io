@@ -6,7 +6,7 @@ import { SectionDetailItem } from "./SectionDetailItem";
 export const Projects = ({ projects }: { projects: Project[] }) => {
   const { t } = useTranslation();
   return projects.length > 0 ? (
-    <Section title={t("Projects") + "(" + projects.length + ")"}>
+    <Section className="page-break" title={t("Projects") + "(" + projects.length + ")"}>
       <ul>
         {projects.map((project, index) => (
           <SectionDetailItem
